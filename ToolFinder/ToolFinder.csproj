@@ -187,6 +187,45 @@
   <ItemGroup>
     <AddInContent Include="Images\ToolSearch16.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\GPToolType Icons\GeoprocessingModel32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\GPToolType Icons\GeoprocessingScript16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\GPToolType Icons\GeoprocessingScript32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\GPToolType Icons\GeoprocessingTask16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\GPToolType Icons\GeoprocessingTask32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\GPToolType Icons\GeoprocessingTool16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\GPToolType Icons\GeoprocessingTool32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\GPToolType Icons\ServiceGeoprocessing16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\GPToolType Icons\ServiceGeoprocessing32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\GPToolType Icons\GeoprocessingModel16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\GPToolType Icons\Function_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\GPToolType Icons\Function_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Images\Sandbox\" />
+  </ItemGroup>
   <PropertyGroup>
     <ZipFileExtension>esriAddIn</ZipFileExtension>
     <AddInTargetProduct>Desktop</AddInTargetProduct>

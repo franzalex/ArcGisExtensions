@@ -20,8 +20,8 @@ namespace ToolFinder
             dockWinID.Value = ThisAddIn.IDs.ToolFinderWindow;
             IDockableWindow dockWindow = ArcMap.DockableWindowManager.GetDockableWindow(dockWinID);
             dockWindow.Show(true);
-            
-            // restore the prevously selected tool
+
+            // restore the previously selected tool
             ArcMap.Application.CurrentTool = prevTool;
         }
         protected override void OnUpdate()
