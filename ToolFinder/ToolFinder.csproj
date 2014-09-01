@@ -98,6 +98,9 @@
       <SubType>UserControl</SubType>
     </Compile>
     -->
+    <Compile Include="BackgroundWorkerProgressBar.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="ExtensionMethods.cs" />
     <Compile Include="Config.Designer.cs">
       <AutoGen>True</AutoGen>
