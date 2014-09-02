@@ -1,13 +1,13 @@
 ﻿using System.ComponentModel;
 using System.Windows.Forms;
 
-namespace ToolFinder
+namespace System.Windows.Forms
 {
     /// <summary>
     /// Executes an operation on a separate thread while displaying the progress in a ProgressBar.
     /// </summary>
     [DefaultEvent("DoWork")]
-    public class BackgroundWorkerProgressBar : System.Windows.Forms.ProgressBar
+    public class ProgressWorker : System.Windows.Forms.ProgressBar
     {
         #region Exposed Events from BackgroundWorker Class
 
@@ -33,10 +33,8 @@ namespace ToolFinder
 
         private delegate void SetProgressStyle();
 
-        /// <summary>
-        /// Initializes a new instance of the <see cref="BackgroundWorkerProgressBar" /> class.
-        /// </summary>
-        public BackgroundWorkerProgressBar()
+        /// <summary>Initializes a new instance of the <see cref="ProgressWorker" /> class.</summary>
+        public ProgressWorker()
             : base()
         {
             worker = new BackgroundWorker() {
@@ -61,12 +59,12 @@ namespace ToolFinder
         public bool CancellationPending { get { return worker.CancellationPending; } }
 
         /// <summary>
-        /// Gets a value indicating whether the <see cref="BackgroundWorkerProgressBar" /> is
-        /// running an asynchronous operation.
+        /// Gets a value indicating whether the <see cref="ProgressWorker" /> is running an
+        /// asynchronous operation.
         /// </summary>
         /// <value>
-        /// <c>true</c> if the <see cref="BackgroundWorkerProgressBar" /> is running an asynchronous
-        /// operation; otherwise, <c>false</c>.
+        /// <c>true</c> if the <see cref="ProgressWorker" /> is running an asynchronous operation;
+        /// otherwise, <c>false</c>.
         /// </value>
         [Browsable(false)]
         public bool IsBusy { get { return worker.IsBusy; } }
@@ -106,7 +104,7 @@ namespace ToolFinder
         /// <summary>Starts asynchronous execution of a background operation.</summary>
         /// <param name="argument">
         /// A parameter for use by the background operation to be executed in the <see
-        /// cref="BackgroundWorkerProgressBar.DoWork" /> event handler.
+        /// cref="ProgressWorker.DoWork" /> event handler.
         /// </param>
         public void RunWorkerAsync(object argument)
         {
@@ -193,6 +191,5 @@ namespace ToolFinder
         }
 
         #endregion BackroundWorker Event Handlers
-
     }
 }
