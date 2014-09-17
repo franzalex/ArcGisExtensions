@@ -33,8 +33,6 @@ namespace ToolFinder
             //var catalog = (ArcMap.Application as IGxApplication).Catalog;
             toolInvoker = new GPToolCommandHelperClass() as IGPToolCommandHelper2;
             gpTools = new List<IGPTool>();
-
-            BuildGeoprocessingToolList();
         }
 
         /// <summary>Host object of the dockable window</summary>
@@ -65,6 +63,9 @@ namespace ToolFinder
 
             // don't do any search if there are no search terms
             if (!searchTerms.Any()) return;
+
+            // build tool database if it is empty
+            if (gpTools.Count == 0) BuildGeoprocessingToolList();
 
             // list all the tools whose names contains the keyword
             var toolList = gpTools.Select((t, i) => new {
@@ -119,8 +120,8 @@ namespace ToolFinder
 
             var toolIconRefs = new[] { new {ImageKey = "Function",
                                             ToolType = esriGPToolType.esriGPFunctionTool,
-                                            Icon16   = Resources.GpFunction_16,
-                                            Icon32   = Resources.GpFunction_32 },
+                                            Icon16   = Resources.GpTool_16,
+                                            Icon32   = Resources.GpTool_32 },
                                        new {ImageKey = "Model",
                                             ToolType = esriGPToolType.esriGPModelTool,
                                             Icon16   = Resources.GpModel_16,
