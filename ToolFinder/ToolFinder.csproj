@@ -98,7 +98,7 @@
       <SubType>UserControl</SubType>
     </Compile>
     -->
-    <Compile Include="ProgressWorker.cs">
+    <Compile Include="BackgroundWorkerProgressBar.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="ExtensionMethods.cs" />
